@@ -54,5 +54,9 @@ public interface PetRepository extends Repository<Pet, Integer> {
      */
     void save(Pet pet);
 
+
+    @Query("SELECT p.id, p.name, p.birthDate FROM Pet p")
+    List<Pet> findAll();
+
 }
 
